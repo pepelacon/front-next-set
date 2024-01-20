@@ -2,7 +2,7 @@ import Head from "next/head";
 import NextProgressBar from "nextjs-progressbar";
 import { FC, ReactNode } from "react";
 
-import { accentColor } from "@/configs/constants";
+// import { accentColor } from "@/configs/constants";
 
 import Favicons from "./Favicons";
 
@@ -13,10 +13,10 @@ const HeadProvider: FC<HeadProviderProps> = ({ children }) => {
   return (
     <>
       <NextProgressBar
-        color={accentColor}
+        color="#E30B13"
         startPosition={0.3}
-        stopDelayMs={200}
-        height={3}
+        stopDelayMs={500}
+        height={7}
       />
       <Head>
         <meta charSet="UTF-8" />

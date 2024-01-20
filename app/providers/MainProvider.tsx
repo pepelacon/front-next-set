@@ -1,4 +1,3 @@
-// import Layout from "@/components/layout/Layout";
 import Layout from "@/components/layout/Layout";
 import { FC, ReactNode } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
