@@ -5,16 +5,17 @@ import { useMutation, useQuery } from "react-query";
 import { toastr } from "react-redux-toastr";
 
 import AuthFields from "@/components/shared/user/AuthFields";
-import Button from "@/components/ui/form-elements/Button";
+
 import Heading from "@/components/ui/heading/Heading";
-import SkeletonLoader from "@/components/ui/skeleton-loader/SkeletonLoader";
 
 import { UserService } from "@/services/user/user.service";
 
 import { toastError } from "@/utils/api/withToastrErrorRedux";
-import { Meta } from "@/utils/meta";
 
 import styles from "./Profile.module.scss";
+import Button from "@/components/ui/form-element/Button";
+import SkeletonLoader from "@/components/ui/SkeletonLoader";
+import { Meta } from "@/utils/meta/Meta";
 
 const Profile: FC = () => {
   const { handleSubmit, register, formState, setValue } =
