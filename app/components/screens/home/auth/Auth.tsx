@@ -7,7 +7,7 @@ import AuthFields from "@/components/shared/user/AuthFields";
 import Button from "@/ui/form-element/Button";
 import Heading from "@/ui/heading/Heading";
 
-// import { useActions } from "@/hooks/useActions";
+import { useActions } from "@/hooks/useActions";
 import { useAuth } from "@/hooks/useAuth";
 
 import { IAuthInput } from "./auth.interface";
@@ -30,13 +30,7 @@ const Auth: FC = () => {
     mode: "onChange",
   });
 
-  // const { login, register } = useActions();
-  const login = (data: any) => {
-    alert({ data });
-  };
-  const register = (data: any) => {
-    alert(data);
-  };
+  const { login, register } = useActions();
 
   const onSubmit: SubmitHandler<IAuthInput> = (data) => {
     if (type === "login") login(data);

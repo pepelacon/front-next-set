@@ -16,7 +16,7 @@ const MenuContainer: FC = () => {
     <div>
       <Menu menu={firstMenu} />
       <GenreMenu />
-      {/* <Menu menu={{ title: 'General', items: [] }} />  */}
+      <Menu menu={{ title: "General", items: [] }} />
     </div>
   );
 };
