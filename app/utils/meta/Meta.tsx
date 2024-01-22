@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Head from "next/head";
 import { siteName, titleMerge } from "@/configs/seo.config";
-import { onlyText } from "./string/clearText";
+import { onlyText } from "../string/clearText";
 import { ISeo } from "./meta.interface";
 
 import logoImage from "@/assets/images/logo.svg";
