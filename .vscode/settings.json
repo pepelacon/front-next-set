@@ -8,6 +8,7 @@
     "optimaze",
     "reduxjs",
     "tailwindcss",
-    "toastr"
+    "toastr",
+    "unoptimized"
   ]
 }

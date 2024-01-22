@@ -1,18 +1,18 @@
 import { FC } from "react";
 
-// import AdminNavigation from "@/ui/admin-navigation/AdminNavigation";
+import AdminNavigation from "@/components/ui/admin-navigation/AdminNavigation";
 import Heading from "@/ui/heading/Heading";
-import { Meta } from "@/utils/meta/Meta";
+import Statistics from "./Statistics/Statistics";
 
-// import Statistics from "./Statistics/Statistics";
+import { Meta } from "@/utils/meta/Meta";
 
 const Admin: FC = () => {
   return (
     <Meta title="Admin panel">
-      {/* <AdminNavigation /> */}
+      <AdminNavigation />
       <Heading title="Some statistics" />
 
-      {/* <Statistics /> */}
+      <Statistics />
     </Meta>
   );
 };
