@@ -23,9 +23,9 @@ import UploadField from "@/components/ui/form-element/UploadField/UploadField";
 import SkeletonLoader from "@/components/ui/SkeletonLoader";
 import { useMovieEdit } from "./useMovieEdit";
 
-// const DynamicSelect = dynamic(() => import("@/ui/select/Select"), {
-//   ssr: false,
-// });
+const DynamicSelect = dynamic(() => import("@/ui/select/Select"), {
+  ssr: false,
+});
 
 const MovieEdit: FC = () => {
   const {
