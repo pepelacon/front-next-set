@@ -8,7 +8,7 @@ import { IGalleryItemProps } from "./gallery.types";
 
 const GalleryItem: FC<IGalleryItemProps> = ({ item, variant }) => {
   return (
-    <Link href={item.url}>
+    <Link legacyBehavior href={item.url}>
       <a
         className={cn(styles.item, {
           [styles.withText]: item.content,
