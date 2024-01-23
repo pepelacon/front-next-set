@@ -33,6 +33,8 @@ export const useUpload: TypeUpload = (onChange, folder) => {
     async (e: ChangeEvent<HTMLInputElement>) => {
       setIsLoading(true);
       const files = e.target.files;
+      console.log(files);
+
       if (files?.length) {
         const formData = new FormData();
         formData.append("image", files[0]);

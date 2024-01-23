@@ -11,20 +11,21 @@ import Heading from "@/ui/heading/Heading";
 import { Meta } from "@/utils/meta/Meta";
 import generateSlug from "@/utils/string/generateSlug";
 
-// import { IMovieEditInput } from "./movie-edit.interface";
+import { IMovieEditInput } from "./movie-edit.interface";
 
 import { useAdminActors } from "./useAdminActors";
 import { useAdminGenres } from "./useAdminGenres";
-import { useMovieEdit } from "./useMovieEdit";
+
 import Button from "@/components/ui/form-element/Button";
 import Field from "@/components/ui/form-element/Field";
 import SlugField from "@/components/ui/form-element/SlugField/SlugField";
 import UploadField from "@/components/ui/form-element/UploadField/UploadField";
 import SkeletonLoader from "@/components/ui/SkeletonLoader";
+import { useMovieEdit } from "./useMovieEdit";
 
-const DynamicSelect = dynamic(() => import("@/ui/select/Select"), {
-  ssr: false,
-});
+// const DynamicSelect = dynamic(() => import("@/ui/select/Select"), {
+//   ssr: false,
+// });
 
 const MovieEdit: FC = () => {
   const {
