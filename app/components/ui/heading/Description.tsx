@@ -9,7 +9,7 @@ const Description: FC<{ text: string; className?: string }> = ({
     <div
       className={`text-lg font-light text-white text-opacity-60 ${className}`}
     >
-      <p>{parse(text)}</p>
+      {parse(text)}
     </div>
   );
 };
