@@ -11,20 +11,20 @@ import { IMovie } from "@/shared/types/movie.types";
 import { Meta } from "@/utils/meta/Meta";
 
 import Content from "./Content/Content";
-// import { useUpdateCountOpened } from "./useUpdateCountOpened";
+import { useUpdateCountOpened } from "./useUpdateCountOpened";
 
 const DynamicPlayer = dynamic(() => import("@/ui/video-player/VideoPlayer"), {
   ssr: false,
 });
-// const DynamicRateMovie = dynamic(() => import("./RateMovie/RateMovie"), {
-//   ssr: false,
-// });
+const DynamicRateMovie = dynamic(() => import("./RateMovie/RateMovie"), {
+  ssr: false,
+});
 
 const SingleMovie: FC<{ movie: IMovie; similarMovies: IGalleryItem[] }> = ({
   movie,
   similarMovies,
 }) => {
-  // useUpdateCountOpened(movie.slug);
+  useUpdateCountOpened(movie.slug);
 
   return (
     <Meta title={movie.title} description={`Watch ${movie.title}`}>
@@ -40,7 +40,7 @@ const SingleMovie: FC<{ movie: IMovie; similarMovies: IGalleryItem[] }> = ({
         <Gallery items={similarMovies} />
       </div>
 
-      {/* <DynamicRateMovie slug={movie.slug} _id={movie._id} /> */}
+      <DynamicRateMovie slug={movie.slug} _id={movie._id} />
     </Meta>
   );
 };
