@@ -13,9 +13,9 @@ import { Meta } from "@/utils/meta/Meta";
 import Content from "./Content/Content";
 // import { useUpdateCountOpened } from "./useUpdateCountOpened";
 
-// const DynamicPlayer = dynamic(() => import("@/ui/video-player/VideoPlayer"), {
-//   ssr: false,
-// });
+const DynamicPlayer = dynamic(() => import("@/ui/video-player/VideoPlayer"), {
+  ssr: false,
+});
 // const DynamicRateMovie = dynamic(() => import("./RateMovie/RateMovie"), {
 //   ssr: false,
 // });
@@ -33,7 +33,7 @@ const SingleMovie: FC<{ movie: IMovie; similarMovies: IGalleryItem[] }> = ({
         Detail={() => <Content movie={movie} />}
       />
 
-      {/* <DynamicPlayer videoSource={movie.videoUrl} slug={movie.slug} /> */}
+      <DynamicPlayer videoSource={movie.videoUrl} slug={movie.slug} />
 
       <div className="mt-12">
         <SubHeading title="Similar" />
