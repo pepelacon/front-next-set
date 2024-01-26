@@ -1,7 +1,6 @@
 import { errorCatch } from "api/api.helpers";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
-import SingleMovie from "@/components/screens/single-movie/SingleMovie";
 import { IGalleryItem } from "@/components/ui/gallery/gallery.types";
 
 import { IMovie } from "@/shared/types/movie.types";
@@ -10,6 +9,7 @@ import { getMovieUrl } from "@/configs/url.config";
 
 import Error404 from "../404";
 import { MovieService } from "@/services/movie.service";
+import SingleMovie from "@/components/screens/single-movie/SingleMovie";
 
 const SingleMoviePage: NextPage<{
   movie: IMovie | undefined;
@@ -56,6 +56,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     return {
       props: { movie, similarMovies },
+      revalidate: 60,
     };
   } catch (e) {
     console.log(errorCatch(e));
