@@ -39,11 +39,11 @@ $shadow:
     @apply absolute overflow-hidden z-0 transition-transform;
 
     &.second {
-      @apply opacity-60 -top-1.5 left-2.5 right-2.5 bottom-4;
+      @apply opacity-20 -top-1.5 left-2.5 right-2.5 bottom-4;
     }
 
     &.third {
-      @apply opacity-40 -top-3 left-5 right-5 bottom-8;
+      @apply opacity-10 -top-3 left-5 right-5 bottom-8;
     }
   }
 

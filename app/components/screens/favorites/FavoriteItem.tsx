@@ -11,7 +11,7 @@ const FavoriteItem: FC<{ item: IFavoriteItem }> = ({ item }) => {
   return (
     <div className={styles.itemWrapper}>
       <FavoriteButton movieId={item._id} />
-      <Link href={item.url}>
+      <Link legacyBehavior href={item.url}>
         <a className={styles.item}>
           <Image
             alt={item.name}

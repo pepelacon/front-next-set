@@ -10,7 +10,7 @@ import { ICollection } from "./collections.types";
 
 const CollectionItem: FC<{ collection: ICollection }> = ({ collection }) => {
   return (
-    <Link href={getGenreUrl(collection.slug)}>
+    <Link legacyBehavior href={getGenreUrl(collection.slug)}>
       <a className={styles.collection}>
         <CollectionImage collection={collection} />
 
