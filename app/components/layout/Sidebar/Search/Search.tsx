@@ -13,7 +13,7 @@ const Search: FC = () => {
 
   const { isSuccess, data: movies } = useQuery(
     ["search movie list", debouncedSearch],
-    () => MovieService.getAll(debouncedSearch),
+    () => MovieService.getMovies(debouncedSearch),
     {
       select: ({ data }) => data,
       enabled: !!debouncedSearch,

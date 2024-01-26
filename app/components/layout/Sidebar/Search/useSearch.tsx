@@ -9,7 +9,7 @@ export const useSearch = () => {
 
   const { isSuccess, data } = useQuery(
     ["search movie list", debouncedSearch],
-    () => MovieService.getAll(debouncedSearch),
+    () => MovieService.getMovies(debouncedSearch),
     {
       select: ({ data }) => data,
       enabled: !!debouncedSearch,

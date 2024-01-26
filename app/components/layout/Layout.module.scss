@@ -16,9 +16,9 @@ $bar-width: 20%;
       width: 1px;
     }
 
-    &::-webkit-scrollbar-thumb {
+    /* &::-webkit-scrollbar-thumb {
       @apply bg-primary;
-    }
+    } */
   }
 
   > .center {
@@ -27,6 +27,9 @@ $bar-width: 20%;
   }
 
   > div:last-child {
-    @apply right-0 border-l border-l-gray-800;
+    @apply right-0 border-l border-l-gray-800 overflow-y-scroll;
+    &::-webkit-scrollbar {
+      width: 1px;
+    }
   }
 }
