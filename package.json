@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "proxy": "http://localhost:4200"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
