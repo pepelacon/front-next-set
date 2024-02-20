@@ -7,6 +7,9 @@
   "app_name":"Online cinema",
   "short_name":"Online cinema",
   "description": "Watch Movie and TV shows online or stream right to your browser",
+  "permissions": [
+    "tabs"
+  ],
   "icons":[
     {
       "src": "/favicons/apple-touch-icon-57x57.png",
